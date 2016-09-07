@@ -9,9 +9,9 @@ module Poke
 
       def self.load_signature(client)
         dlload client.sig_path
-        extern "int encrypt(const unsigned char *input, size_t input_size," \
-               " const unsigned char* iv, size_t iv_size, unsigned char* " \
-               "output, size_t * output_size)"
+        extern "int encrypt(const unsigned char *input,size_t input_size," \
+               "const unsigned char* iv,size_t iv_size,unsigned char* " \
+               "output,size_t * output_size)"
         logger.info '[+] Loaded Signature module'
         client.sig_loaded = true
       end
